@@ -39,18 +39,14 @@ class LinkedList {
       console.log("Linked list is empty");
       return;
     }
-    // If found at first place
-    if (this.head.data === data) {
-      console.log("Node found:", this.head);
-      return;
-    }
+
     let pointer = this.head;
-    while (pointer && pointer.next !== null) {
-      pointer = pointer.next;
+    while (pointer) {
       if (pointer.data === data) {
         console.log("Node found:", pointer);
         return;
       }
+      pointer = pointer.next;
     }
     console.log("Not Found any node");
   }
