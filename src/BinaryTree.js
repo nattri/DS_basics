@@ -65,17 +65,50 @@ class BinarySearchTree {
     }
   }
 
-  BFS() {}
+  delete() {
+    // if it is a leaf node
+    // Just remove the node
+    // if it has one child
+    // copy content of child to parent
+    // if it has two children
+    // find inorder successor and replace its value, then delete successor node
+  }
 
-  DFS() {}
+  preOrder() {
+    this._preOrder(this.root);
+  }
 
-  delete() {}
+  _preOrder(node) {
+    if (node !== null) {
+      console.log(node.data);
+      this._preOrder(node.leftNode);
+      this._preOrder(node.rightNode);
+    }
+  }
 
-  inOrder() {}
+  inOrder() {
+    this._inOrder(this.root);
+  }
 
-  preOrder() {}
+  _inOrder(node) {
+    if (node !== null) {
+      this._inOrder(node.leftNode);
+      console.log(node.data);
+      this._inOrder(node.rightNode);
+    }
+  }
 
-  postOrder() {}
+  postOrder() {
+    this._postOrder(this.root);
+  }
+
+  _postOrder(node) {
+    if (node !== null) {
+      this._postOrder(node.leftNode);
+      this._postOrder(node.rightNode);
+      console.log(node.data);
+    }
+  }
 }
 
 const init = () => {
@@ -85,9 +118,11 @@ const init = () => {
   bst.insert(20);
   bst.insert(8);
   bst.insert(9);
-  bst.insert(17);
-  // console.log(bst);
-  bst.findNode(10);
+  bst.insert(7);
+  bst.insert(13);
+  console.log(bst);
+  // bst.findNode(10);
+  console.log(bst.inOrder());
 };
 
 export default init;
