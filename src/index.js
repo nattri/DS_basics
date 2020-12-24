@@ -3,6 +3,7 @@ import StackInit from "./Stack";
 import BinaryTreeInit from "./BinaryTree";
 import BubbleSort from "./sorting/bubbleSort";
 import SelectionSort from "./sorting/selectionSort";
+import MergeSort from "./sorting/mergeSort";
 
 // Uncomment to check logs for specific implementation
 // LinkedListInit();
@@ -10,3 +11,4 @@ import SelectionSort from "./sorting/selectionSort";
 // BinaryTreeInit();
 // console.log(BubbleSort([1, 12, 7, 9, 10, 13, 14]));
 // console.log(SelectionSort([1, 12, 4, 9, 10, 13, 14]));
+console.log(MergeSort([1, 12, 4, 15, 9, 10, 13, 14]));
