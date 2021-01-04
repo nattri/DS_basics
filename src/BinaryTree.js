@@ -74,6 +74,7 @@ class BinarySearchTree {
     // find inorder successor and replace its value, then delete successor node
   }
 
+  // Depth first: pre order traversal
   preOrder() {
     this._preOrder(this.root);
   }
@@ -86,6 +87,7 @@ class BinarySearchTree {
     }
   }
 
+  // Depth first: In order traversal
   inOrder() {
     this._inOrder(this.root);
   }
@@ -98,6 +100,7 @@ class BinarySearchTree {
     }
   }
 
+  // Depth first: post order traversal
   postOrder() {
     this._postOrder(this.root);
   }
@@ -108,6 +111,28 @@ class BinarySearchTree {
       this._postOrder(node.rightNode);
       console.log(node.data);
     }
+  }
+
+  // Breadth first search
+  bfs() {
+    let queue = [];
+    let visited = [];
+
+    if (this.root) {
+      queue.push(this.root);
+
+      while (queue.length) {
+        const node = queue.shift();
+        visited.push(node.data);
+        if (node.leftNode) {
+          queue.push(node.leftNode);
+        }
+        if (node.rightNode) {
+          queue.push(node.rightNode);
+        }
+      }
+    }
+    return visited;
   }
 }
 
@@ -122,7 +147,8 @@ const init = () => {
   bst.insert(13);
   console.log(bst);
   // bst.findNode(10);
-  console.log(bst.inOrder());
+  console.log(bst.bfs());
+  // console.log(bst.inOrder());
 };
 
 export default init;
