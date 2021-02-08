@@ -1,6 +1,9 @@
 import LinkedListInit from "./linkedList";
 import StackInit from "./Stack";
 import BinaryTreeInit from "./BinaryTree";
+import MaxBinaryHeap from "./BinaryHeap";
+
+// sort
 import BubbleSort from "./sorting/bubbleSort";
 import SelectionSort from "./sorting/selectionSort";
 import MergeSort from "./sorting/mergeSort";
@@ -9,7 +12,9 @@ import QuickSort from "./sorting/quickSort";
 // Uncomment to check logs for specific implementation
 // LinkedListInit();
 // StackInit();
-BinaryTreeInit();
+// BinaryTreeInit();
+// MaxBinaryHeap();
+
 // console.log(BubbleSort([1, 12, 7, 9, 10, 13, 14]));
 // console.log(SelectionSort([1, 12, 4, 9, 10, 13, 14]));
 // console.log(MergeSort([1, 12, 4, 15, 9, 10, 13, 14]));
